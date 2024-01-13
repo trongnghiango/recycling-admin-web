@@ -1,0 +1,7 @@
+/* Start: Google Input Design */
+input[type="text"]:focus~.input-text,
+input[type="text"]:not(:placeholder-shown)~.input-text {
+  @apply text-zinc-800 transform translate-y-[-30px] -translate-x-3 scale-75;
+}
+/* End: Google Input Design */
+

@@ -1,0 +1,10 @@
+dist
+.next
+./build
+tsconfig.json
+tsconfig.server.json
+tailwind.config.js
+next.config.js
+postcss.config.js
+addons
+docker-entrypoint-initdb.d

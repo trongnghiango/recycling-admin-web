@@ -1,0 +1,25 @@
+.wrapper {
+  @apply bg-[#3D3935] shadow text-white;
+}
+
+.wrapperContainer {
+  @apply container mx-auto;
+}
+
+.crumb {
+  /*list-style-type: none;*/
+  /*padding-left: 0;*/
+  @apply px-4 w-full items-center flex justify-between;
+}
+
+.crumb li {
+  @apply p-3 inline-block hover:text-[#C19A30] text-lg border-b-[4px] hover:border-[#C19A30] border-transparent hover:transition duration-150 relative no-underline  box-border;
+}
+
+.crumb li::after {
+  background-color: transparent;
+    background-image: none;
+    border-bottom: 4px solid #BE933C!important;
+    box-shadow: none;
+    color: #fff;
+}

@@ -1,0 +1,51 @@
+version: "3.9"
+
+services:
+  myapp:
+    image: trongnghiango/myapp
+    build:
+      context: .
+    container_name: myapp
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      # This maps port from .env on the host to same port number on the container.
+      - "$PORT:$PORT"
+    volumes:
+      - ./logs:/home/node/app/logs
+      - ./uploads:/home/node/app/uploads
+    # links:
+    #   - mongodb
+    # depends_on:
+    #   - mongodb
+    # networks:
+    #   - proxy_network
+    # mongodb:
+    #   # To create this service, Compose will pull the mongo
+    #   image: mongo:6.0.3
+    #   container_name: mongodb
+    #   restart: unless-stopped
+    #   # This tells Compose that we would like to add environment variables
+    #   # from a file called .env, located in our build context.
+    #   env_file: .env
+    #   environment:
+    #     - MONGO_INITDB_ROOT_USERNAME=$DB_ADMIN
+    #     - MONGO_INITDB_ROOT_PASSWORD=$DB_ADMIN_PWD
+    #     - MONGO_INITDB_DATABASE=$DB_NAME
+    #   ports:
+    #     - 27017:27017
+    #   volumes:
+    #     - ./docker-entrypoint-initdb.d/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    #       # The named volume dbdata will persist the data stored in Mongo’s default data directory, /data/db.
+    #       # This will ensure that you don’t lose data in cases where you stop or remove containers.
+    #     - dbdata:/data/db
+    #   networks:
+    #     - proxy_network
+
+    # volumes:
+    #   dbdata:
+
+
+    # networks:
+    #   proxy_network:
+    #     name: proxy_network

@@ -1,0 +1,12 @@
+@layer components {
+  .player__container {
+    @apply mobile: max-w-[600px] tablet:max-w-[900px] desktop:max-w-[1200px];
+  }
+}
+
+.arrowhidden__select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}

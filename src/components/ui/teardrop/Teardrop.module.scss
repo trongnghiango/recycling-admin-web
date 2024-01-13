@@ -1,0 +1,27 @@
+.teardrop {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #d6751a;
+
+    /* Border */
+    border: 2px solid #d6751a;
+    border-radius: 50% 50% 0px 50%;
+
+    /* Angle at the top */
+    transform: rotate(45deg);
+
+    /* Size */
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-bottom: 1rem;
+
+    box-shadow: 4px 4px;
+}
+
+.teardrop__content {
+    color: black;
+    font-size: 20px;
+    transform: rotate(-45deg);
+}
